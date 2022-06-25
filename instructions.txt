@@ -11,14 +11,15 @@
 
 //3. Declare variables
 
-//4. Create gitignore file and push to github
+//4. Create .gitignore and add node_modules to it, and push to github
 
 //5. Connect to MongoDB - add connection string to .env file
 
 //6. Add .env file to gitignore
 
-//7. Create Port
+//7. Create Port in .env file
 
+    //PORT = process.env
     //Test Mongo and Port Connection
 
 //8. Set middleware
