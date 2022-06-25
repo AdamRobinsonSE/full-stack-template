@@ -17,6 +17,13 @@ MongoClient.connect(dbConnectionString)
         collection = db.collection('alien-info')    // Set collection, a variable that holds the collection of the database
     })
 
+app.set('view engine', 'ejs') // Set the view engine to ejs, a templating engine for node.js, allows us to use html in our code
+app.use(cors()) // Use cors, a middleware that allows cross-origin requests, bypass cross-origin errors
+app.use(express.static('public')) // Use express.static, a middleware that serves static files, in this case, the public folder
+app.use(express.json()) // Use express.json, a middleware that parses JSON, allows us to use JSON in our code
+app.use(express.urlencoded({ extended: true })) // Use express.urlencoded, a middleware that parses URL encoded data, allows us to use URL encoded data in our code
+
+
 app.listen(process.env.PORT || PORT, () => {
-    console.log(`Server listening on port`) // Log to console that the server is listening on port 8000
+    console.log(`Server listening on port`) // Log to console that the server is listening on port
 })
